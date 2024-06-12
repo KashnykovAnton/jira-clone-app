@@ -1,0 +1,27 @@
+.statusFilter {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.statusFilter legend {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.statusFilter label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.statusFilter input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #007bff;
+}
+
+.statusFilter input[type="radio"]:checked {
+  background-color: #007bff;
+}

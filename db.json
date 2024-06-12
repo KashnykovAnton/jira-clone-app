@@ -1,0 +1,68 @@
+{
+  "cards": [
+    {
+      "id": "1",
+      "name": "Learn React",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
+      "group": "Frontend",
+      "importance": "Low",
+      "status": "TODO"
+    },
+    {
+      "name": "Learn Node",
+      "description": "lorem ipsum ipsum",
+      "group": "Frontend",
+      "importance": "High",
+      "status": "Done",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Learn Express",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
+      "group": "Backend",
+      "importance": "High",
+      "status": "Done"
+    },
+    {
+      "id": "4",
+      "name": "Learn MongoDB",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
+      "group": "Backend",
+      "importance": "Medium",
+      "status": "TODO"
+    },
+    {
+      "id": "6",
+      "name": "Learn SQL",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
+      "group": "Database",
+      "importance": "Low",
+      "status": "Done"
+    },
+    {
+      "id": "7",
+      "name": "Learn Redux",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
+      "group": "State Management",
+      "importance": "High",
+      "status": "TODO"
+    },
+    {
+      "id": "JGYPVrJICk2v8H8NYuz1d",
+      "name": "Test 2",
+      "description": "lorem ipsum ipsum",
+      "group": "Database",
+      "importance": "Low",
+      "status": "TODO"
+    },
+    {
+      "id": "J8GFCne8H3o0eN-oOqoU_",
+      "name": "Test 3",
+      "description": "lorem ipsum ipsum",
+      "group": "Database",
+      "importance": "Low",
+      "status": "TODO"
+    }
+  ]
+}

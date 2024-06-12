@@ -1,0 +1,27 @@
+.buttonBase {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.red {
+  background-color: #dc3545;
+  color: white;
+}
+
+.red:hover {
+  background-color: #a71d2a;
+}
+
+.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.blue:hover {
+  background-color: #0056b3;
+}
+  

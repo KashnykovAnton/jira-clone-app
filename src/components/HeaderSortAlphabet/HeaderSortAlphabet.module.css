@@ -1,0 +1,24 @@
+.sortTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alphabeticalSortContainer {
+  width: 240px;
+  height: 74px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.alphabeticalSortContainer input {
+  margin-right: 16px;
+}
+
+.alphabeticalSortContainer label {
+  font-size: 16px;
+  font-weight: bold;
+}

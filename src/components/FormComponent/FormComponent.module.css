@@ -1,0 +1,26 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  padding: 40px;
+  margin: 30px auto;
+  border: solid 2px #41403e;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+}
+
+.formContainer label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
