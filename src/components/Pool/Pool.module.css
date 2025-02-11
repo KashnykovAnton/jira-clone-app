@@ -1,0 +1,48 @@
+.swimmingPool {
+  width: calc((100% - 64px) / 3);
+  flex: 1;
+  /* background-color: var(--white-color); */
+  background-color: transparent;
+  list-style: none;
+  /* border: 1px solid #e0e0e0; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  transition: background-color 0.2s ease;
+}
+
+.cardsContainer {
+  padding: 16px;
+}
+
+.poolDragging {
+  height: 100%;
+  background-color: #e0dfe7;
+  border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poolDraggingOver {
+  height: 100%;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+}
+
+.swimmingPoolTitle {
+  padding: 16px;
+  text-align: center;
+  color: var(--main-text-color);
+  border-radius: 8px;
+  transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
+}
+
+.swimmingPoolTitle:hover {
+  cursor: pointer;
+  background-color: #e0dfe7;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.divider:last-child {
+  display: none;
+}

@@ -1,37 +1,75 @@
-import React from "react";
-import s from "./CardView.module.css";
-import Button from "../Button/Button";
+import { Card, CardContent, Avatar, Typography, Stack, TextField, Divider, Box } from "@mui/material";
+import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectSingleCard } from "../../store/cards/cards-selectors";
+import CardButton from "../CardButton/CardButton";
+import avatarImage from "../../images/avatar.png";
 
-const CardView = ({ card, onDeleteClick, onEditClick }) => {
+const CardView = () => {
+  const navigate = useNavigate();
+  const { cardId } = useParams();
+  const card = useSelector(selectSingleCard);
+
+  const handleEditClick = () => {
+    navigate(`/edit/${cardId}`);
+  };
+
+  const handleCancelClick = () => {
+    navigate(-1);
+  };
+
   return (
-    <div className={s.cardContainer}>
-      <h2 className={s.cardHeader}>Detailed card information</h2>
-      {card && (
-        <>
-          <div className={s.cardDetails}>
-            <h3 className={s.cardDetailTitle}>
-              <span>Name:</span> {card.name}
-            </h3>
-            <p className={s.cardDetailItem}>
-              <span>Description:</span> {card.description}
-            </p>
-            <p className={s.cardDetailItem}>
-              <span>Application group:</span> {card.group}
-            </p>
-            <p className={s.cardDetailItem}>
-              <span>Importance:</span> {card.importance}
-            </p>
-            <p className={s.cardDetailItem}>
-              <span>Status:</span> {card.status}
-            </p>
-          </div>
-          <div className={s.buttonContainer}>
-            <Button onClick={onEditClick} styleButton={"blue"}>Edit</Button>
-            <Button onClick={onDeleteClick} styleButton={"red"}>Delete</Button>
-          </div>
-        </>
-      )}
-    </div>
+    <Box sx={{ padding: "32px" }}>
+      <Card
+        sx={{
+          maxWidth: 600,
+          margin: "auto",
+          padding: 2,
+          borderRadius: 3,
+          boxShadow: 3,
+          bgcolor: "var(--white-color)",
+        }}
+      >
+        <Stack
+          direction="row"
+          spacing={2}
+          alignItems="center"
+          sx={{ position: "relative", display: "flex", justifyContent: "center", mb: 2 }}
+        >
+          <Avatar
+            src={avatarImage}
+            sx={{
+              position: "absolute",
+              top: 0,
+              right: "16px",
+              width: 40,
+              height: 40,
+            }}
+          />
+          <Stack>
+            <Typography variant="h6" fontWeight="bold" sx={{ textAlign: "center", mt: 0.5 }}>
+              {card.name}
+            </Typography>
+          </Stack>
+        </Stack>
+        <Divider sx={{ my: 2 }} />
+        <CardContent>
+          <Stack spacing={2}>
+            <TextField label="Name" defaultValue={card.name} fullWidth disabled />
+            <TextField label="Description" defaultValue={card.description} fullWidth multiline maxRows={6} disabled />
+            <TextField label="Application Group" defaultValue={card.group} disabled fullWidth />
+            <TextField label="Importance" defaultValue={card.importance} disabled fullWidth />
+            <TextField label="Status" defaultValue={card.status} disabled fullWidth />
+            <TextField label="Type" defaultValue={card.type} disabled fullWidth />
+          </Stack>
+        </CardContent>
+        <Divider sx={{ my: 2 }} />
+        <Stack direction="row" spacing={2} justifyContent="space-around" sx={{ mt: 2 }}>
+          <CardButton text="Edit" onClick={handleEditClick} />
+          <CardButton text="Cancel" onClick={handleCancelClick} />
+        </Stack>
+      </Card>
+    </Box>
   );
 };
 

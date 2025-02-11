@@ -1,42 +1,62 @@
-import CreatableSelect from "react-select/creatable";
+import { useState } from "react";
+import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 import { useSelector } from "react-redux";
 import { selectGroups } from "../../store/cards/cards-selectors";
-import withCommonStyles from "../../decorators/selectDecorator";
 
 const InputStyledCreatableSelect = ({ name, onChange, value }) => {
-  const StyledCreatableSelect = withCommonStyles(CreatableSelect);
-  const customComponents = {
-    ClearIndicator: null,
-  };
-
   const groups = useSelector(selectGroups);
+  const [options, setOptions] = useState(groups);
+  const filter = createFilterOptions();
 
-  const existingGroupsForSelect = (groups) => {
-    return groups.map((option) => ({ value: option, label: option }));
-  };
-
-  const handleSelectChange = (name) => {
-    return (event, actionMeta) => onChange(event, { name });
-  };
-
-  // Rewrite the logic of adding and deleting groups
-
-  const handleCreateGroup = (inputValue) => {
-    const newGroup = { value: inputValue, label: inputValue };
-    onChange(newGroup, { name });
+  const handleSelectChange = (event, newValue) => {
+    const fakeEvent = {
+      target: {
+        name,
+        value: newValue,
+      },
+    };
+    if (typeof newValue === "string") {
+      if (!options.includes(newValue)) {
+        setOptions((prevOptions) => [...prevOptions, newValue]);
+      }
+      onChange(fakeEvent, { name });
+    } else if (newValue?.inputValue) {
+      const newGroup = newValue.inputValue;
+      fakeEvent.target.value = newGroup;
+      if (!options.includes(newGroup)) {
+        setOptions((prevOptions) => [...prevOptions, newGroup]);
+      }
+      onChange(fakeEvent, { name });
+    } else {
+      onChange(fakeEvent, { name });
+    }
   };
 
   return (
-    <StyledCreatableSelect
-      components={customComponents}
-      isClearable
-      onChange={handleSelectChange(name)}
-      onCreateOption={handleCreateGroup}
+    <Autocomplete
       value={value}
-      options={existingGroupsForSelect(groups)}
-      required
-      label={name}
-      placeholder="Select one of the existing groups or create a new one"
+      options={options}
+      onChange={handleSelectChange}
+      filterOptions={(options, params) => {
+        const filtered = filter(options, params);
+        const { inputValue } = params;
+        const isExisting = options.includes(inputValue);
+        if (inputValue !== "" && !isExisting) {
+          filtered.push({
+            inputValue,
+            label: `Add "${inputValue}"`,
+          });
+        }
+
+        return filtered;
+      }}
+      selectOnFocus
+      clearOnBlur
+      freeSolo
+      renderInput={(params) => (
+        <TextField {...params} label="Select or create a group" placeholder="Type to search or create" />
+      )}
     />
   );
 };

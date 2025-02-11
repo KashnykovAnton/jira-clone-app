@@ -1,9 +1,16 @@
-import s from './Title.module.css'
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
 
-const Title = ({children}) => {
-  return (
-    <h3 className={s.title}>{children}</h3>
-  )
-}
+const StyledTitle = styled(Typography)(({ theme }) => ({
+  fontSize: "24px",
+  color: "#555",
+  margin: "0px auto",
+  paddingTop: "24px",
+  textAlign: "center",
+}));
 
-export default Title
+const Title = ({ children }) => {
+  return <StyledTitle variant="h3">{children}</StyledTitle>;
+};
+
+export default Title;

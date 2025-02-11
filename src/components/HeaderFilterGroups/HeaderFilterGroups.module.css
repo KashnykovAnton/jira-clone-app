@@ -1,34 +1,8 @@
-.groupsWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 12px;
+.toggleButton {
+  color: var(--secondary-text-color);
 }
 
-.groupsList {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.groupsItem {
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 1em;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.groupsItem:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  cursor: pointer;
-}
-
-.groupsItem p {
-  margin: 0;
+.toggleButton:hover {
+  color: var(--main-text-color);
+  background-color: #e0dfe7;
 }

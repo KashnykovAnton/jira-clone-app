@@ -1,5 +1,12 @@
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

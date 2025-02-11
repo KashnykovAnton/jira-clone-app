@@ -1,38 +1,38 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectGroups } from "../../store/cards/cards-selectors";
+import { nanoid } from "nanoid";
+import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { selectFilters, selectGroups } from "../../store/cards/cards-selectors";
 import { setSelectedGroup } from "../../store/cards/cards-slice-filter";
-import s from "./HeaderFilterGroups.module.css";
-import Button from "../Button/Button";
+import styles from "./HeaderFilterGroups.module.css";
 
 const HeaderFilterGroups = () => {
   const dispatch = useDispatch();
   const groups = useSelector(selectGroups);
+  const { selectedGroup } = useSelector(selectFilters);
 
-  const handleGroupClick = (group) => {
+  const handleGroupClick = (e, group) => {
     dispatch(setSelectedGroup(group));
   };
 
-  const handleResetGroupFilter = () => {
-    dispatch(setSelectedGroup(null));
-  };
-
   const renderApllicationGroups = () => {
-    return groups.map((group) => (
-      <li key={group} className={s.groupsItem} onClick={() => handleGroupClick(group)}>
-        <p>{group}</p>
-      </li>
-    ));
+    return groups.map((group) => {
+      if (group !== undefined) {
+        return (
+          <ToggleButton key={nanoid()} value={group} size="small" className={styles.toggleButton}>
+            {group}
+          </ToggleButton>
+        );
+      }
+      return null;
+    });
   };
 
   return (
-    <div className={s.groupsWrapper}>
-      <ul className={s.groupsList}>
+    <Box sx={{pb: "8px"}}>
+      <ToggleButtonGroup value={selectedGroup} exclusive onChange={handleGroupClick}>
         {groups.length > 0 ? renderApllicationGroups() : <p>There is no any application group yet</p>}
-      </ul>
-      <Button onClick={handleResetGroupFilter} styleButton={"red"}>
-        Reset group filter
-      </Button>
-    </div>
+      </ToggleButtonGroup>
+    </Box>
   );
 };
 

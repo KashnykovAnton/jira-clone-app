@@ -6,9 +6,8 @@ import axios from "axios";
 
 const {REACT_APP_BASE_URL, REACT_APP_PORT} = process.env;
 axios.defaults.baseURL = REACT_APP_BASE_URL + ':' + REACT_APP_PORT;
+console.log(axios.defaults.baseURL);
 // axios.defaults.port = REACT_APP_PORT;
-
-console.log(REACT_APP_PORT);
 
 export async function fetchCards() {
   const { data } = await axios(`cards`);

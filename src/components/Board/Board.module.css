@@ -1,26 +1,19 @@
 .boardContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 8px;
 }
 
 .poolsContainer {
   display: flex;
-  gap: 24px;
-  justify-content: space-between;
-  width: 100%;
+  gap: 16px;
 }
 
-.swimmingPool {
-  width: calc((100% / 3) - 48px);
-  margin: 10px;
-  padding: 24px;
-  background-color: #e9ecef;
-  border-radius: 8px;
+.droppable {
+  display: flex;
+  gap: 16px;
 }
 
-.swimmingPoolTitle {
-  text-align: center;
-  margin-bottom: 24px;
-}
+

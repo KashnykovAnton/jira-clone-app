@@ -1,19 +1,18 @@
-import { Oval } from 'react-loader-spinner';
-import styles from './LoaderSpin.module.css';
+import { Box, CircularProgress } from "@mui/material";
 
 function LoaderSpin() {
   return (
-    <div className={styles.backdrop}>
-      <Oval
-        visible={true}
-        height="80"
-        width="80"
-        color="red"
-        secondaryColor="gray"
-        ariaLabel="oval-loading"
-        wrapperClass={styles.spinnerWrapper}
-      />
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+      }}
+    >
+      <CircularProgress sx={{ color: "#93959c" }} />
+    </Box>
   );
 }
 

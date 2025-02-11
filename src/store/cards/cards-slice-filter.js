@@ -4,7 +4,8 @@ const initialState = {
   selectedGroup: null,
   selectedStatus: null,
   selectedSortImportance: "",
-  selectedSortAlphabetically: false,
+  selectedSortAlphabeticallyAZ: false,
+  selectedSortAlphabeticallyZA: false,
 };
 
 const filtersSlice = createSlice({
@@ -20,12 +21,20 @@ const filtersSlice = createSlice({
     setSelectedSortImportance(state, { payload }) {
       state.selectedSortImportance = payload;
     },
-    setSelectedSortAlphabetically(state, { payload }) {
-      state.selectedSortAlphabetically = payload;
+    setSelectedSortAlphabeticallyAZ(state, { payload }) {
+      state.selectedSortAlphabeticallyAZ = payload;
+    },
+    setSelectedSortAlphabeticallyZA(state, { payload }) {
+      state.selectedSortAlphabeticallyZA = payload;
     },
   },
 });
 
-export const { setSelectedGroup, setSelectedStatus, setSelectedSortImportance, setSelectedSortAlphabetically } =
-  filtersSlice.actions;
+export const {
+  setSelectedGroup,
+  setSelectedStatus,
+  setSelectedSortImportance,
+  setSelectedSortAlphabeticallyAZ,
+  setSelectedSortAlphabeticallyZA,
+} = filtersSlice.actions;
 export const filterSliceReducer = filtersSlice.reducer;

@@ -1,68 +1,74 @@
 {
   "cards": [
     {
-      "id": "1",
-      "name": "Learn React",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
-      "group": "Frontend",
-      "importance": "Low",
-      "status": "TODO"
-    },
-    {
-      "name": "Learn Node",
-      "description": "lorem ipsum ipsum",
-      "group": "Frontend",
-      "importance": "High",
-      "status": "Done",
-      "id": "2"
-    },
-    {
-      "id": "3",
-      "name": "Learn Express",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
-      "group": "Backend",
-      "importance": "High",
-      "status": "Done"
-    },
-    {
-      "id": "4",
-      "name": "Learn MongoDB",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
-      "group": "Backend",
-      "importance": "Medium",
-      "status": "TODO"
-    },
-    {
       "id": "6",
       "name": "Learn SQL",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
       "group": "Database",
+      "groupColor": "#a8e6cf",
       "importance": "Low",
-      "status": "Done"
+      "status": "Done",
+      "type": "Epic"
     },
     {
-      "id": "7",
       "name": "Learn Redux",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus facilis aperiam labore laudantium quibusdam in atque quas accusantium quae, similique molestiae delectus libero ipsa cupiditate aliquam necessitatibus dicta laboriosam excepturi!",
       "group": "State Management",
+      "groupColor": "#ddedc4",
       "importance": "High",
-      "status": "TODO"
+      "status": "In Progress",
+      "id": "7",
+      "type": "Epic"
     },
     {
-      "id": "JGYPVrJICk2v8H8NYuz1d",
-      "name": "Test 2",
-      "description": "lorem ipsum ipsum",
-      "group": "Database",
+      "id": "-nRETqXF29aAUF1vY6T1Z",
+      "name": "Learn Python in 2025",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "group": "Backend",
+      "groupColor": "#ffd4b8",
       "importance": "Low",
-      "status": "TODO"
+      "status": "Done",
+      "type": "Task"
     },
     {
-      "id": "J8GFCne8H3o0eN-oOqoU_",
+      "id": "p4gbWZObG5c1XA6Fd900u",
+      "name": "test 2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "group": "MUI changes",
+      "groupColor": "#ff667d",
+      "importance": "High",
+      "status": "TODO",
+      "type": "Story"
+    },
+    {
+      "id": "IxSYX8sSxE-jBmeTGIJSc",
       "name": "Test 3",
-      "description": "lorem ipsum ipsum",
-      "group": "Database",
-      "importance": "Low",
-      "status": "TODO"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "group": "Backend",
+      "groupColor": "#ffd4b8",
+      "importance": "Medium",
+      "status": "In Progress",
+      "type": "Story"
+    },
+    {
+      "id": "tuBMhMgqmF9TzLv88WxVS",
+      "name": "Learn Python!",
+      "description": "Lorem ipsum",
+      "group": "Backend",
+      "groupColor": "#ffd4b8",
+      "importance": "Medium",
+      "status": "TODO",
+      "type": "Bug"
+    },
+    {
+      "id": "nsgAjr83eZg7-Q25EuVcV",
+      "name": "Fix the bugs ",
+      "description": "Ipsum, numquam eos.",
+      "group": "Work with Node",
+      "groupColor": "#fff5bd",
+      "importance": "High",
+      "status": "TODO",
+      "type": "Bug"
     }
   ]
 }

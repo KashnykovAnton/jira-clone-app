@@ -1,17 +1,22 @@
 import { createSelector } from "reselect";
+import { importanceLevels } from "../../utils/options";
 
 // cards selectors
 export const selectCards = (state) => state.cards.cards;
 export const selectLoader = (state) => state.cards.isLoading;
 export const selectSingleCard = (state) => state.cards.singleCard;
 export const selectGroups = createSelector([selectCards], (cards) => {
-  const groupsArr = [];
-  cards.forEach((card) => {
-    if (!groupsArr.includes(card.group)) {
-      groupsArr.push(card.group);
-    }
-  });
-  return groupsArr.sort((a, b) => a.localeCompare(b));
+  // --- old approach ---
+  // const groupsArr = [];
+  // cards.forEach((card) => {
+  //   if (!groupsArr.includes(card.group)) {
+  //     groupsArr.push(card.group);
+  //   }
+  // });
+  // return groupsArr.sort((a, b) => a.localeCompare(b));
+
+  const groups = new Set(cards.map((card) => card.group));
+  return Array.from(groups).sort((a, b) => a.localeCompare(b));
 });
 
 // filters selectors
@@ -26,8 +31,6 @@ const selectFilteredCards = createSelector([selectCards, selectFilters], (cards,
   });
 });
 
-const importanceLevels = { Low: 1, Medium: 2, High: 3 };
-
 const sortByImportance = createSelector([selectFilters, selectFilteredCards], (filters, cards) => {
   const { selectedSortImportance } = filters;
   if (selectedSortImportance === "") return cards;
@@ -40,10 +43,14 @@ const sortByImportance = createSelector([selectFilters, selectFilteredCards], (f
 export const selectFilteredAndSortedCards = createSelector(
   [sortByImportance, selectFilters],
   (sortedByImportanceCards, filters) => {
-    const { selectedSortAlphabetically } = filters;
-    if (!selectedSortAlphabetically) return sortedByImportanceCards;
-    return sortedByImportanceCards.slice().sort((a, b) => a.name.localeCompare(b.name));
+    const { selectedSortAlphabeticallyAZ, selectedSortAlphabeticallyZA } = filters;
+
+    if (selectedSortAlphabeticallyAZ) {
+      return sortedByImportanceCards.slice().sort((a, b) => a.name.localeCompare(b.name));
+    }
+    if (selectedSortAlphabeticallyZA) {
+      return sortedByImportanceCards.slice().sort((a, b) => b.name.localeCompare(a.name));
+    }
+    return sortedByImportanceCards;
   }
 );
-
-// rewrite the logic 

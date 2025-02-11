@@ -1,0 +1,34 @@
+:root {
+  /* --layout-color: #e1e0f9;
+  --background-color: #fef8ff;
+  --background-color: #f5f5f5;
+  --alternative-background-color: #f8f3fb;
+  --header-color: #f2ecf5;
+  --input-color: #f2ecf5;
+  --wide-line-color: #c5c4dc;
+  --thin-line-color: #c4c9bc;
+  --border-color: #acabb9;
+  --button-color: #675396;
+  --main-text-color: #1c1b20;
+  --secondary-text-color: #93959c;
+  --description-text-color: #716c75;
+  --white-color: #ffffff;
+  --alternative-white-color: #fffbff;
+  --error-color: #f94e4d;
+  --error-background-color: #fdecee;
+  --success-color: #0ca507;
+  --success-background-color: #eef3ec;
+  --warning-color: #2a9df5;
+  --warning-background-color: #e8edf3;
+  --info-color: #00ffff;
+  --chip-start-color: #ffd5e2; */
+  --action-color: #562bf7;
+  --hover-action-color: #4621c6;
+  --background-action-color: #ebe7ff;
+  --white-color: #ffffff;
+  --background-color: #f6f7fb;
+  --main-text-color: #1b2032;
+  --secondary-text-color: #a9aeb7;
+  --third-text-color: #74788d;
+  --line-color: #eeedf2;
+}

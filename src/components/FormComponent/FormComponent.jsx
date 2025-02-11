@@ -29,6 +29,8 @@ const FormComponent = ({ initialValues = defaultInitialValues, edited = () => {}
     status: initialValues.status,
   });
 
+  console.log("formValues -> ", formValues);
+
   const dispatch = useDispatch();
   const isLoading = useSelector(selectLoader);
 

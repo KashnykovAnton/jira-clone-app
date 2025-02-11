@@ -1,0 +1,43 @@
+// const colors = {
+//   layoutColor: "#e1e0f9",
+//   backgroundColor: "#fef8ff",
+//   alternativeBackgroundColor: "#f8f3fb",
+//   headerColor: "#f2ecf5",
+//   inputColor: "#f2ecf5",
+//   wideLineColor: "#c5c4dc",
+//   thinLineColor: "#c4c9bc",
+//   borderColor: "#acabb9",
+//   buttonColor: "#675396",
+//   mainTextColor: "#1c1b20",
+//   secondaryTextColor: "#93959c",
+//   descriptionTextColor: "#716c75",
+//   whiteColor: "#ffffff",
+//   alternativeWhiteColor: "#fffbff",
+//   errorColor: "#f94e4d",
+//   errorBackgroundColor: "#fdecee",
+//   successColor: "#0ca507",
+//   successBackgroundColor: "#eef3ec",
+//   warningColor: "#2a9df5",
+//   warningBackgroundColor: "#e8edf3",
+//   infoColor: "#00ffff",
+//   chipStartColor: "#ffd5e2",
+// };
+
+const colors = {
+  actionColor: "#562bf7",
+  hoverActionColor: "#4621c6",
+  backgroundActionColor: "#ebe7ff",
+  whiteColor: "#ffffff",
+  backgroundColor: "#f6f7fb",
+  textColor: "#1b2032",
+  secondaryTextColor: "#a9aeb7",
+  thirdTextColor: "#74788d",
+  lineColor: "#eeedf2",
+  errorColor: "#f94e4d",
+  warningColor: "#2a9df5",
+  infoColor: "#00ffff",
+  successColor: "#0ca507",
+  chipStartColor: "#ffd5e2",
+};
+
+export default colors;

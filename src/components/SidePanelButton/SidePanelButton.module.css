@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+  color: #93959c;
+}
+
+.button:hover {
+  background-color: #e0dfe7;
+  color: var(--main-text-color)
+}
+
+.icon {
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
